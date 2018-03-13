@@ -132,7 +132,6 @@ def recomendar(nombreDumpModelo,id, lat, lon):
     df_prediccion=df_prediccion[0:maxRecomendaciones]
     n_recomendaciones=df_prediccion.shape[0]
     
-    print('patatita')
     
     #return df_prediccion['id_route'].to_string()
     return "id:"+str(id)+" lat:"+str(lat)+" lon:"+str(lon)+"\n Numero de rutas del usuario: "+str(n_train)+"\n"+df_train.to_string()+"\n Numero de rutas encontradas: "+str(n_recomendaciones)+"\n"+df_prediccion.to_string()
