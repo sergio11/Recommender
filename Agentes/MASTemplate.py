@@ -30,7 +30,7 @@ if __name__ == '__main__':
     # Initialize agents with their agent dependencies
     dataPersistenceAgent.setup(ns,bss_info)
     predictionAgent.setup(ns, bss_info, dataPersistenceAgent)
-    webAgent.setup(ns, bss_info, predictionAgent)
+    webAgent.setup(ns, bss_info, predictionAgent,dataPersistenceAgent)
 
 
     while True:

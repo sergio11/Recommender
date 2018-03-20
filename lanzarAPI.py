@@ -63,10 +63,8 @@ def guardarCSV(fichero,nombreDumpModelo):
 
 
 def recomendar(nombreDumpModelo,id, lat, lon):
-    # Protegiendo el sistema de posibles nombres de fichero que contengan paths dañinos. http://flask.pocoo.org/docs/0.12/patterns/fileuploads/
-    nombreDumpModelo = secure_filename(nombreDumpModelo)
-
-    # generar una carpeta en la que guardar todos los datos basada en la identidad que se le ha dado al modelo de forma que tenga una estructura funcional
+    
+    # abrir csv
     rutaIdModelo = os.path.join(rutaModelos, nombreDumpModelo)
     make_sure_path_exists(rutaIdModelo)
     rutaFicheroDatos = os.path.join(rutaIdModelo, "data.csv")
