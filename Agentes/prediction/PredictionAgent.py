@@ -56,10 +56,10 @@ class PredictionAgent(BaseAgent):
         #filtrado de datos por id_usuario
         filtro=['total_time','distance', 'average_speed','elevation_gain','elevation_loss']
     
-        df_train = df_leido.query('id_user_bike_mobile =='+str(id)) #filas
+        df_train = df_leido.query('id_user =='+str(id)) #filas
         df_train = df_train.filter(items=filtro)                    #columnas
     
-        df_test = df_leido.query('id_user_bike_mobile !='+str(id))  #filas
+        df_test = df_leido.query('id_user !='+str(id))  #filas
         df_test = df_test.filter(items=filtro)                      #columnas
     
         n_train=df_train.shape[0]
