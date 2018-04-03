@@ -63,6 +63,10 @@ class PredictionAgent(BaseAgent):
         df_test = df_test.filter(items=filtro)                      #columnas
     
         n_train=df_train.shape[0]
+        
+        #Retorna una lista vacia en caso de que no haya otras rutas
+        if ( df_test.shape[0] <= 0 ):
+            return pd.DataFrame()
 
         if ( n_train > 0 ) :
 
