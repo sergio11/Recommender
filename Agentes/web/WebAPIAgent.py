@@ -122,7 +122,8 @@ class WebAPIAgent(BaseAgent):
             self.log_info("Sending recommendations to user")                                                        
         
             #return recomendar(nombreDumpModelo,id,lat,lon)
-            return str(df['id_route'].values)
+            #return str(df['id_route'].values) 
+            return str(df['id_route'].values.tolist())
 
 
 
