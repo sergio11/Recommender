@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     # Agent spawn
     dataPersistenceAgent = run_agent('dataPersistenceAgent', base=DataPersistenceAgent)
-    predictionAgent = run_agent('predictionAgent', base=PredictionAgent)
+    predictionAgent = run_agent('recommendationAgent', base=PredictionAgent)
     webAgent = run_agent('webAgent', base=WebAPIAgent)
 
     # Initialize agents with their agent dependencies
