@@ -95,7 +95,7 @@ class PredictionAgent(BaseAgent):
             df_prediccion=df_test
     
         #añadir columnas con los id de ruta y distancia al usuario
-        df_prediccion=df_prediccion.join(df_leido[['id_route','user_distance']])
+        df_prediccion=df_prediccion.join(df_leido[['id_hash','id_route','user_distance']])
         
         self.log_info("{} routes found".format(len(df_prediccion)))
     

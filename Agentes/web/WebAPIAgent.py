@@ -123,7 +123,7 @@ class WebAPIAgent(BaseAgent):
         
             #return recomendar(nombreDumpModelo,id,lat,lon)
             #return str(df['id_route'].values) 
-            return str(df['id_route'].values.tolist())
+            return str(df['id_hash'].values.tolist())
 
 
 
